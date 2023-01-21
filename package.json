@@ -1,12 +1,16 @@
 {
   "name": "@programador-novato/jsid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
+  "author": "Antonio Cintora Romero (@programador-novato)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LordAntonio99/jsid"
+  },
   "scripts": {
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "description": ""
 }

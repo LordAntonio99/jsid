@@ -35,6 +35,18 @@ const JSID = class {
       return `${this.getFirstName(gender)} ${this.getSurname()}`;
     }
   }
+
+  getAddress() {
+    const addresses_us = require("./addresses_us.js");
+    const address =
+      addresses_us[Math.floor(Math.random() * addresses_us.length)];
+    return {
+      address: address.address1,
+      city: address.city,
+      state: address.state,
+      zip: address.postalCode,
+    };
+  }
 };
 
 const jsid = new JSID();
