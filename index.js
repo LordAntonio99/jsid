@@ -6,7 +6,8 @@ const JSID = class {
     this._name = "JSID";
     gender = this.gender;
   }
-  getName(gender) {
+
+  getFirstName(gender) {
     if (gender.toUpperCase() === "M") {
       return names_male[Math.floor(Math.random() * names_male.length)];
     } else if (gender.toUpperCase() === "F") {
@@ -25,6 +26,14 @@ const JSID = class {
   getSurname() {
     const surnames = require("./surnames.js");
     return surnames[Math.floor(Math.random() * surnames.length)];
+  }
+
+  getFullName(gender) {
+    if (gender === undefined || gender === "") {
+      throw new Error("Bad usage, provide F for female or M for male.");
+    } else {
+      return `${this.getFirstName(gender)} ${this.getSurname()}`;
+    }
   }
 };
 
