@@ -53,6 +53,12 @@ const JSID = class {
       zip: address.postalCode,
     };
   }
+
+  getUniqueID() {
+    const crypto = require("crypto");
+    const uid = crypto.randomUUID();
+    return uid;
+  }
 };
 
 const jsid = new JSID();
