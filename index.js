@@ -28,6 +28,12 @@ const JSID = class {
     return surnames[Math.floor(Math.random() * surnames.length)];
   }
 
+  /**
+   *
+   * @param {string} gender Genre of the name to be returned. F for female and M for male.
+   * @return {string} Full name of the person.
+   * @see https://documents-iota.vercel.app
+   */
   getFullName(gender) {
     if (gender === undefined || gender === "") {
       throw new Error("Bad usage, provide F for female or M for male.");
